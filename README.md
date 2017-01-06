@@ -5,4 +5,5 @@
 2 . 工具类规则：文件名中包含 .tools 字段 在检测js语法的时候自动过滤</br>
 3 . grunt 自动合并、检查、压缩的入口按照package中jspath自动装载文件</br>
 4 . 压缩依赖package中配置的environment（product、dev）进行选择 product版本进行代码合并、检查、压缩，dev环境 只进行代码合并，检查</br>
-5 . 命令组合查看package 中script</br>
+5 . 命令组合查看package 中script;</br>
+6 . npm install -g grunt-cli;npm install;
