@@ -1,0 +1,27 @@
+{
+  "name": "samplefrontwork",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "concatjs":"grunt concatjs",
+    "checkjs":"grunt validatejs",
+    "uglify":"grunt uglify",
+    "compressjs":"grunt compressjs"
+  },
+  "author": "jianfa,do4net",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  },
+  "environment":"product",
+  "jspath":{
+    "commonsrc":"./src/Scripts/common",
+    "commondesc":"./product/Scripts/common",
+    "commondescdev":"./dev/Scripts/common"
+  }
+}

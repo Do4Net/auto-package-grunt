@@ -1,0 +1,24 @@
+@import "../sass/base";
+@import "../sass/skin-red";
+@import "../sass/login";
+
+.center-box {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  &:hover {
+    border-color: #e4e4e4;
+    box-shadow: 0 0 8px 3px #e4e4e4;
+    -webkit-box-shadow: 0 0 8px 3px #e4e4e4;
+  }
+}
+.retrieve-fifth .center-box,.retrieve-fourth .center-box{
+  &:hover{
+    border-color: #E6E6E6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+.white-com-box{
+  margin-left: 570px;
+}

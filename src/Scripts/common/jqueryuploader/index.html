@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script type="text/javascript" src="../lib/core.js"></script>
+
+    <!--引入JS-->
+    <!-- 预览图片要用的 Begin -->
+    <!--<script src="load-image.all.min.js"></script>-->
+    <!--<script src="canvas-to-blob.min.js"></script>-->
+    <script src="jquery.iframe-transport.js"></script>
+    <!-- 预览图片要用的 End -->
+    <script src="vendor/jquery.ui.widget.js"></script>
+    <script src="jquery.fileupload.js"></script>
+    <script src="../lib/uzai.utils.js"></script>
+    <script src="../validate/uzai.validate.js"></script>
+    <script src="index.js"></script>
+    <!-- 预览图片要用的 Begin -->
+    <!-- <script src="jquery.fileupload-process.js"></script>-->
+    <!--<script src="jquery.fileupload-image.js"></script>-->
+
+</head>
+<body>
+    <div class="form-horizontal" id="fileuploader" data-jurl="http://fx.utour.com/user/upload">
+        <div class="form-group">
+            <label class="control-label"><i>*</i>证明函：</label>
+            <div class="from-upload-btn fileinput-button">
+                <div class="filePicker" id="filePicker">上传</div>
+                <input id="file" type="file" multiple=""
+                       data-control="common/jqueryuploader"
+                       data-limit-filenum="1"
+                       data-limit-filemax="1"
+                       data-upload-btn="#filePicker"
+                       data-show-container="#files"
+                       data-uploading-msg="上传中..."
+                       data-uploaded-msg="重新上传"
+                       data-upload-type="image"
+                       data-upload-singlefile="true"
+                       data-target-parameter-name="visaletter"
+                       data-jurl="http://ap.utech.com:8080/files/common/attachment/upload"> 
+            </div>
+            <div class="files" id="files"></div>
+        </div>
+
+       <input type="button" value="提交" id="btn" />
+    </div>
+
+<script>
+    $("#btn").click(function () {
+        $("#fileuploader").formPost(function (json) {
+
+        });
+    })
+    
+    //$('#file').fileupload({
+    //    url: "http://ap.utech.com:8080/files/common/attachment/upload",
+    //    type:"post",
+    //    dataType: "json",
+    //    acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+    //    maxFileSize: 100,
+    //    disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
+    //    previewMaxWidth: 100,
+    //    previewMaxHeight: 100,
+    //    previewCrop: true
+    //}).on('fileuploadadd', function (e, data) {
+
+    //    var _self = $(this);
+    //    //上传中
+    //    $(this).prev('.filePicker').html('上传中....请稍候');
+    //    $.each(data.files, function (index, file) {
+    //        _self.parents('.fileinput-button').next('.files').append('<p class="files-tips">' + file.name + '</p>');
+    //    });
+    //}).on('fileuploaddone', function (e, data) {
+    //    var result=data.result;
+    //    var _self = $(this);
+    //    //上传完成
+    //    _self.prev('.filePicker').html('上传完成');
+
+
+    //}).on('fileuploadfail', function (e, data) {
+
+    //    //上传失败
+    //    $(this).prev('.filePicker').html('上传失败,重新上传');
+
+
+    //}).on('fileuploadprocessalways', function (e, data) {
+    //    var index = data.index,
+    //        file = data.files[index],
+    //        _self = $(this);
+
+    //    if (file.preview) {
+    //        _self.parents('.fileinput-button').next('.files').append(file.preview);
+    //    }
+
+    //    if (file.error) {
+    //        _self.parents('.fileinput-button').next('.files').append('<br /><i>' + file.error + '</i>');
+    //    }
+
+    //});
+</script>
+</body>
+</html>
