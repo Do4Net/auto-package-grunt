@@ -49,7 +49,7 @@ function writeJshintFlage(srcDir){
   }
 
   getFiles(srcDir,files,srcDir);
- // console.log(files);
+ // console.log(files); 
   return files;
 };
 

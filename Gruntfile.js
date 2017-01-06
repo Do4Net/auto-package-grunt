@@ -4,6 +4,7 @@ var fs=require("fs");
 module.exports = function(grunt) {
 
 var packageinfo=grunt.file.readJSON('package.json');
+ 
 grunt.initConfig({
   pkg:packageinfo,
    uglify: {
@@ -49,7 +50,7 @@ grunt.initConfig({
                 $: false,
                 jQuery: true,
                 Tools:false
-            }
+      }
     }
   }
 });
@@ -102,6 +103,7 @@ grunt.initConfig({
 
   function getModuleEntry(srcDir){
   var files={};
+   
   var getFiles=function(srcDir,files){
     var dirs = fs.readdirSync(srcDir);
 
@@ -112,7 +114,8 @@ grunt.initConfig({
         temp=path.resolve(srcDir, item); 
         if (matchs) {
           var tempPath=path.resolve(srcDir,"index.js");
-          var indexPath=tempPath.replace("src","Content");
+
+          var indexPath=tempPath.replace("src",packageinfo.environment);
           if(!files[indexPath]){
             files[indexPath]=[];
           }
